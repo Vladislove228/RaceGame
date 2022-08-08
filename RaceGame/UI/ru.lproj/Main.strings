@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; configuration.title = "Rating"; ObjectID = "GjV-F8-ah3"; */
+"GjV-F8-ah3.configuration.title" = "Rating";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GjV-F8-ah3"; */
+"GjV-F8-ah3.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Hello"; ObjectID = "Nme-Mv-U4J"; */
+"Nme-Mv-U4J.text" = "Hello";
+
+/* Class = "UIButton"; configuration.title = "Settings"; ObjectID = "djV-or-9T7"; */
+"djV-or-9T7.configuration.title" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "djV-or-9T7"; */
+"djV-or-9T7.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Start"; ObjectID = "rKZ-K9-AI5"; */
+"rKZ-K9-AI5.configuration.title" = "Start";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rKZ-K9-AI5"; */
+"rKZ-K9-AI5.normalTitle" = "Button";
