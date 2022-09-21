@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
     func deleteDB() {
     let realm = try! Realm()
-    let allUploadingObjects = realm.objects(Score.self)
+    let allUploadingObjects = realm.objects(ScoreDB.self)
         
     try! realm.write {
     realm.delete(allUploadingObjects)
@@ -44,7 +44,16 @@ class ViewController: UIViewController {
         }
 
     }
-
+    
+    override func viewDidLayoutSubviews(){
+        super.viewDidLayoutSubviews()
+        if Core.shared.isNewUser () {
+            let vc = storyboard?.instantiateViewController(identifier: "welcome") as! WelcomeViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        }
+    }
+            
     @IBAction func settingsButton(_ sender: Any) {
         let settingsViewController = SettingsViewController.instantiate()
         settingsViewController.modalPresentationStyle = .fullScreen
@@ -120,3 +129,14 @@ class ViewController: UIViewController {
     
 }
 
+class Core {
+    static let shared = Core()
+    func isNewUser()-> Bool {
+        
+        return !UserDefaults.standard.bool(forKey: "isNewUser")
+    }
+
+    func setistwutNewUser(){
+        UserDefaults.standard.set(true, forKey: "isNewUser")
+    }
+}

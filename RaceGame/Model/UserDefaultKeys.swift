@@ -11,5 +11,6 @@ enum UserDefaultKeys: String {
     case enteredScoreValue
     case enteredCarIndex
     case enteredBreakIndex
-    
+    case enteredMusic
+    case enteredControl
 }

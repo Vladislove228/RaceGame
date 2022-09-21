@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A7553E71871915E4809CB70 /* Pods_RaceGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D3310BCC059E7253F74CCD /* Pods_RaceGame.framework */; };
+		E2317F2028C912E200FFB006 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2317F1F28C912E200FFB006 /* WelcomeViewController.swift */; };
 		E23FFBCB28062F510071FF23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23FFBCA28062F510071FF23 /* AppDelegate.swift */; };
 		E23FFBCD28062F510071FF23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23FFBCC28062F510071FF23 /* SceneDelegate.swift */; };
 		E23FFBCF28062F510071FF23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23FFBCE28062F510071FF23 /* ViewController.swift */; };
@@ -25,10 +26,13 @@
 		E26099D72897F18000D31F01 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26099D62897F18000D31F01 /* Score.swift */; };
 		E26099DA2898064F00D31F01 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26099D82898064F00D31F01 /* RecordTableViewCell.swift */; };
 		E26099DB2898064F00D31F01 /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26099D92898064F00D31F01 /* RecordTableViewCell.xib */; };
+		E279F7AF28CBAEAE0063F7FD /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E279F7AE28CBAEAE0063F7FD /* DBManager.swift */; };
+		E297244728DAE8CD00B201B3 /* ScoreDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E297244628DAE8CD00B201B3 /* ScoreDB.swift */; };
 		E2A6DEF0284240E7008B81E2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6DEEF284240E7008B81E2 /* Settings.swift */; };
 		E2A6DEF228427208008B81E2 /* UserDefaults+UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6DEF128427208008B81E2 /* UserDefaults+UserDefaultKey.swift */; };
 		E2A6DEF42842722C008B81E2 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A6DEF32842722C008B81E2 /* UserDefaultKeys.swift */; };
 		E2AAF8AE2875A84900C3C701 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2AAF8B02875A84900C3C701 /* Localizable.strings */; };
+		E2DE66E628C4A124000497FC /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E2DE66E528C4A124000497FC /* music.mp3 */; };
 		E2E76B722825352C0031C6BD /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E76B712825352C0031C6BD /* UIView+CornerRadius.swift */; };
 		E2E76B74282535470031C6BD /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E76B73282535470031C6BD /* UIView+Shadow.swift */; };
 		E2E76B76282537630031C6BD /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E76B75282537630031C6BD /* UIColor+Hex.swift */; };
@@ -38,6 +42,7 @@
 		19B27B19B28ED8053A8E445D /* Pods-RaceGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaceGame.release.xcconfig"; path = "Target Support Files/Pods-RaceGame/Pods-RaceGame.release.xcconfig"; sourceTree = "<group>"; };
 		C3D3310BCC059E7253F74CCD /* Pods_RaceGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RaceGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2092EC2062C8045A0B357D /* Pods-RaceGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaceGame.debug.xcconfig"; path = "Target Support Files/Pods-RaceGame/Pods-RaceGame.debug.xcconfig"; sourceTree = "<group>"; };
+		E2317F1F28C912E200FFB006 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		E23FFBC728062F510071FF23 /* RaceGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaceGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E23FFBCA28062F510071FF23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E23FFBCC28062F510071FF23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +62,8 @@
 		E26099D62897F18000D31F01 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		E26099D82898064F00D31F01 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		E26099D92898064F00D31F01 /* RecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
+		E279F7AE28CBAEAE0063F7FD /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		E297244628DAE8CD00B201B3 /* ScoreDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDB.swift; sourceTree = "<group>"; };
 		E2A6DEEF284240E7008B81E2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E2A6DEF128427208008B81E2 /* UserDefaults+UserDefaultKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+UserDefaultKey.swift"; sourceTree = "<group>"; };
 		E2A6DEF32842722C008B81E2 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
@@ -64,6 +71,7 @@
 		E2AAF8AD2875A84200C3C701 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E2AAF8AF2875A84900C3C701 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E2AAF8B12875A84A00C3C701 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E2DE66E528C4A124000497FC /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = ../../../../Downloads/music.mp3; sourceTree = "<group>"; };
 		E2E76B712825352C0031C6BD /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		E2E76B73282535470031C6BD /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		E2E76B75282537630031C6BD /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 				E23FFBCA28062F510071FF23 /* AppDelegate.swift */,
 				E23FFBCC28062F510071FF23 /* SceneDelegate.swift */,
 				E26099D12897E39500D31F01 /* String+Localizable.swift */,
+				E2DE66E528C4A124000497FC /* music.mp3 */,
 				E2AAF8B02875A84900C3C701 /* Localizable.strings */,
 				E23FFBD328062F520071FF23 /* Assets.xcassets */,
 				E23FFBD528062F520071FF23 /* LaunchScreen.storyboard */,
@@ -127,16 +136,17 @@
 		E26099C22897E2F800D31F01 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E26099D82898064F00D31F01 /* RecordTableViewCell.swift */,
-				E26099D92898064F00D31F01 /* RecordTableViewCell.xib */,
 				E23FFBCE28062F510071FF23 /* ViewController.swift */,
+				E2317F1F28C912E200FFB006 /* WelcomeViewController.swift */,
 				E23FFBD028062F510071FF23 /* Main.storyboard */,
 				E23FFBE0280630C20071FF23 /* PlayViewController.swift */,
 				E23FFBE22806327F0071FF23 /* PlayViewController.storyboard */,
-				E23FFBE4280632E60071FF23 /* SettingsViewController.swift */,
-				E23FFBE6280632EE0071FF23 /* SettingsViewController.storyboard */,
 				E23FFBE82806336B0071FF23 /* TableViewController.swift */,
 				E23FFBEC280635880071FF23 /* TableViewController.storyboard */,
+				E26099D82898064F00D31F01 /* RecordTableViewCell.swift */,
+				E26099D92898064F00D31F01 /* RecordTableViewCell.xib */,
+				E23FFBE4280632E60071FF23 /* SettingsViewController.swift */,
+				E23FFBE6280632EE0071FF23 /* SettingsViewController.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -145,9 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				E2A6DEEF284240E7008B81E2 /* Settings.swift */,
-				E2A6DEF128427208008B81E2 /* UserDefaults+UserDefaultKey.swift */,
 				E2A6DEF32842722C008B81E2 /* UserDefaultKeys.swift */,
 				E26099D62897F18000D31F01 /* Score.swift */,
+				E297244628DAE8CD00B201B3 /* ScoreDB.swift */,
+				E279F7AE28CBAEAE0063F7FD /* DBManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +166,7 @@
 		E26099C42897E30B00D31F01 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E2A6DEF128427208008B81E2 /* UserDefaults+UserDefaultKey.swift */,
 				E2E76B712825352C0031C6BD /* UIView+CornerRadius.swift */,
 				E2E76B75282537630031C6BD /* UIColor+Hex.swift */,
 				E2E76B73282535470031C6BD /* UIView+Shadow.swift */,
@@ -235,6 +247,7 @@
 			files = (
 				E23FFBD728062F520071FF23 /* LaunchScreen.storyboard in Resources */,
 				E23FFBE32806327F0071FF23 /* PlayViewController.storyboard in Resources */,
+				E2DE66E628C4A124000497FC /* music.mp3 in Resources */,
 				E26099DB2898064F00D31F01 /* RecordTableViewCell.xib in Resources */,
 				E23FFBED280635880071FF23 /* TableViewController.storyboard in Resources */,
 				E2AAF8AE2875A84900C3C701 /* Localizable.strings in Resources */,
@@ -298,6 +311,7 @@
 				E26099D72897F18000D31F01 /* Score.swift in Sources */,
 				E26099DA2898064F00D31F01 /* RecordTableViewCell.swift in Sources */,
 				E23FFBE92806336B0071FF23 /* TableViewController.swift in Sources */,
+				E2317F2028C912E200FFB006 /* WelcomeViewController.swift in Sources */,
 				E2A6DEF42842722C008B81E2 /* UserDefaultKeys.swift in Sources */,
 				E23FFBE1280630C20071FF23 /* PlayViewController.swift in Sources */,
 				E26099D22897E39500D31F01 /* String+Localizable.swift in Sources */,
@@ -305,9 +319,11 @@
 				E2A6DEF228427208008B81E2 /* UserDefaults+UserDefaultKey.swift in Sources */,
 				E23FFBCB28062F510071FF23 /* AppDelegate.swift in Sources */,
 				E23FFBCD28062F510071FF23 /* SceneDelegate.swift in Sources */,
+				E279F7AF28CBAEAE0063F7FD /* DBManager.swift in Sources */,
 				E2E76B74282535470031C6BD /* UIView+Shadow.swift in Sources */,
 				E23FFBE5280632E60071FF23 /* SettingsViewController.swift in Sources */,
 				E2A6DEF0284240E7008B81E2 /* Settings.swift in Sources */,
+				E297244728DAE8CD00B201B3 /* ScoreDB.swift in Sources */,
 				E2E76B76282537630031C6BD /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

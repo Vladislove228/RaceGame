@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import AVFoundation
 
 
 struct Settings {
@@ -20,7 +20,10 @@ struct Settings {
     ]
     static  var carImage: [UIImage] = [
         UIImage(named: "car1.png")!,
-        UIImage(named: "car2.png")!
+        UIImage(named: "car2.png")!,
+        UIImage(named: "car3.png")!,
+        UIImage(named: "car4.png")!,
+        UIImage(named: "car5.png")!
     ]
     static var name : String = ""
     
@@ -31,6 +34,13 @@ struct Settings {
     var score : [Int] = []
     
     static var scoreValue = 0
+    
+    static var audioPlayer = AVAudioPlayer()
+    
+    static var musicValue : Float = 0.0
+    
+    static var control : Bool = true
+    
 }
 
     

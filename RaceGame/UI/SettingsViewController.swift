@@ -24,6 +24,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var speedField: UITextField!
     @IBOutlet weak var carViewImage: UIImageView!
     @IBOutlet weak var breakViewImage: UIImageView!
+    @IBOutlet var musicSlider: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -55,6 +56,21 @@ class SettingsViewController: UIViewController {
             Settings.indexBreak = Int(breakIndex)
             breakViewImage.image = Settings.listOfImages[Settings.indexBreak ]
         }
+        if let musicSliderValue = UserDefaults.standard.float(forKey: .enteredMusic){
+            Settings.musicValue = Float(musicSliderValue)
+            musicSlider.value = Settings.musicValue
+        }
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        save(text: nameField.text)
+        save1(text1: speedField.text)
+        
+        saveCarIndex(carIndex: Settings.indexCar)
+        saveBreakIndex(breakIndex: Settings.indexBreak)
+        saveMusic(musicSliderValue: Settings.musicValue)
     }
     func setupUI(){
         nameLabel.text = "nameLabel".localized()
@@ -142,7 +158,12 @@ class SettingsViewController: UIViewController {
         }
         UserDefaults.standard.set(text1, forKey: .enteredValue1)
     }
-    
+    private func saveMusic(musicSliderValue: Float?){
+        guard let musicSliderValue = musicSliderValue else {
+            return
+        }
+        UserDefaults.standard.set(musicSliderValue, forKey: .enteredMusic)
+    }
 
     
     @IBAction func buttonBackPressed(_ sender: Any) {
@@ -151,14 +172,20 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func saveButtonAction(_ sender: Any) {
-        save(text: nameField.text)
-        save1(text1: speedField.text)
-        
-        saveCarIndex(carIndex: Settings.indexCar)
-        saveBreakIndex(breakIndex: Settings.indexBreak)
+//        save(text: nameField.text)
+//        save1(text1: speedField.text)
+//        
+//        saveCarIndex(carIndex: Settings.indexCar)
+//        saveBreakIndex(breakIndex: Settings.indexBreak)
        
                             
      
+    }
+    
+    @IBAction func volumeChanged(_ sender: Any) {
+        Settings.audioPlayer.volume = musicSlider.value
+        Settings.musicValue = musicSlider.value
+        
     }
 }
 

@@ -6,8 +6,9 @@ import RealmSwift
 class TableViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
-    var scores: Results<Score>?
+    var scores = [ScoreDB]()
     var observer: Any?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.cornerRadius = 15
@@ -19,7 +20,9 @@ class TableViewController: UIViewController {
         
         
         let localRealm = try! Realm()
-        let objects = localRealm.objects(Score.self)
+        let objects = localRealm.objects(ScoreDB.self)
+       
+        
         observer = objects.observe { changes in
             switch changes {
             case .initial:
@@ -31,18 +34,21 @@ class TableViewController: UIViewController {
             }
             
         }
-       
+        
+    
     }
    
     func reloadData() {
         let localRealm = try! Realm()
-        let objects = localRealm.objects(Score.self)
-
-        self.scores = objects
+        let objects = localRealm.objects(ScoreDB.self)
+        let performedData = objects.sorted(by: {$0.scoreValue > $1.scoreValue}).enumerated().compactMap({$0 < 10 ? $1 : nil})
+        self.scores = performedData
+        
         tableView.reloadData()
     }
     
-   
+
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -53,15 +59,16 @@ class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scores?.count ?? 0
+    
+        return scores.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableViewCell", for: indexPath) as!
         RecordTableViewCell
-        if let scores = scores {
+       
             cell.configure(with: scores[indexPath.row])
-        }
+        
         
         
 

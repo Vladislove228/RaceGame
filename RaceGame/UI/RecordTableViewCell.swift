@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 class RecordTableViewCell: UITableViewCell {
-    var scores: Results<Score>?
+    var scores: Results<ScoreDB>?
     var observer: Any?
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var ScoreLabel: UILabel!
@@ -16,7 +16,7 @@ class RecordTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    func configure(with score: Score){
+    func configure(with score: ScoreDB){
         self.nameLabel.text = score.name
         self.ScoreLabel.text = "\(Int(score.scoreValue))"
     }

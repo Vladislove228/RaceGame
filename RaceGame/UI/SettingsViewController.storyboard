@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rv-jw-r6t">
-                                <rect key="frame" x="0.0" y="44" width="414" height="2058"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="2054"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kmo-Rp-yWj" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
@@ -41,17 +42,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCo-gk-tro">
-                                                <rect key="frame" x="100" y="1132" width="214" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Z4J-E5-uet"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
-                                                <connections>
-                                                    <action selector="saveButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qEk-nZ-9rS"/>
-                                                </connections>
-                                            </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sO-xr-1NR">
                                                 <rect key="frame" x="20" y="246" width="374" height="34"/>
                                                 <color key="backgroundColor" systemColor="tintColor"/>
@@ -107,6 +97,22 @@
                                                     <constraint firstAttribute="width" constant="250" id="YX6-j3-esW"/>
                                                 </constraints>
                                             </view>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hNw-0n-mw5">
+                                                <rect key="frame" x="80" y="1143" width="254" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="RvN-yd-jZV"/>
+                                                    <constraint firstAttribute="height" constant="50" id="n3a-9G-mLF"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="volumeChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Iw9-9O-Pwd"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYw-01-xrD">
+                                                <rect key="frame" x="20" y="1102" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -118,18 +124,20 @@
                                             <constraint firstAttribute="trailing" secondItem="Leu-E4-g8e" secondAttribute="trailing" constant="30" id="8aS-5R-VZj"/>
                                             <constraint firstItem="YhK-mu-n9U" firstAttribute="top" secondItem="pxd-Lf-4wU" secondAttribute="bottom" constant="50" id="CC6-6w-DCL"/>
                                             <constraint firstItem="MKC-Wc-0b0" firstAttribute="centerX" secondItem="Kmo-Rp-yWj" secondAttribute="centerX" id="Es7-Oy-RXf"/>
-                                            <constraint firstItem="sCo-gk-tro" firstAttribute="leading" secondItem="Kmo-Rp-yWj" secondAttribute="leading" constant="100" id="FGD-ic-crg"/>
                                             <constraint firstAttribute="trailing" secondItem="1tX-i2-qBS" secondAttribute="trailing" constant="20" id="FzA-Bk-vKY"/>
                                             <constraint firstItem="pxd-Lf-4wU" firstAttribute="top" secondItem="6sO-xr-1NR" secondAttribute="bottom" constant="50" id="G82-8b-I5k"/>
                                             <constraint firstAttribute="trailing" secondItem="wCP-xI-zg1" secondAttribute="trailing" constant="30" id="HQe-Um-T7d"/>
                                             <constraint firstItem="YhK-mu-n9U" firstAttribute="centerX" secondItem="Kmo-Rp-yWj" secondAttribute="centerX" id="Hee-z6-neT"/>
+                                            <constraint firstItem="YYw-01-xrD" firstAttribute="leading" secondItem="Kmo-Rp-yWj" secondAttribute="leading" constant="20" id="HpJ-ls-Zri"/>
                                             <constraint firstItem="wCP-xI-zg1" firstAttribute="top" secondItem="Kmo-Rp-yWj" secondAttribute="top" constant="40" id="I4d-Ub-61J"/>
+                                            <constraint firstItem="hNw-0n-mw5" firstAttribute="centerX" secondItem="Kmo-Rp-yWj" secondAttribute="centerX" id="IiA-Ua-OA4"/>
                                             <constraint firstItem="Leu-E4-g8e" firstAttribute="top" secondItem="DLB-65-a99" secondAttribute="bottom" constant="50" id="Lfm-hh-Drd"/>
                                             <constraint firstItem="Leu-E4-g8e" firstAttribute="leading" secondItem="Kmo-Rp-yWj" secondAttribute="leading" constant="30" id="OsI-WI-hg9"/>
                                             <constraint firstItem="6sO-xr-1NR" firstAttribute="top" secondItem="Leu-E4-g8e" secondAttribute="bottom" constant="50" id="P2I-n9-cQv"/>
-                                            <constraint firstItem="sCo-gk-tro" firstAttribute="top" secondItem="634-Ow-QJJ" secondAttribute="bottom" constant="50" id="XFZ-ha-SAB"/>
+                                            <constraint firstItem="hNw-0n-mw5" firstAttribute="top" secondItem="YYw-01-xrD" secondAttribute="bottom" constant="20" id="Rmu-mi-0kG"/>
+                                            <constraint firstItem="YYw-01-xrD" firstAttribute="top" secondItem="634-Ow-QJJ" secondAttribute="bottom" constant="20" id="Uie-BR-E1z"/>
+                                            <constraint firstAttribute="trailing" secondItem="YYw-01-xrD" secondAttribute="trailing" constant="20" id="aS0-1W-PkG"/>
                                             <constraint firstItem="pxd-Lf-4wU" firstAttribute="leading" secondItem="Kmo-Rp-yWj" secondAttribute="leading" constant="20" id="bHf-cF-vZn"/>
-                                            <constraint firstAttribute="trailing" secondItem="sCo-gk-tro" secondAttribute="trailing" constant="100" id="bfy-nA-mNL"/>
                                             <constraint firstItem="DLB-65-a99" firstAttribute="top" secondItem="wCP-xI-zg1" secondAttribute="bottom" constant="30" id="cmR-Ud-r6c"/>
                                             <constraint firstItem="634-Ow-QJJ" firstAttribute="centerX" secondItem="Kmo-Rp-yWj" secondAttribute="centerX" id="crM-Mp-FBH"/>
                                             <constraint firstItem="6sO-xr-1NR" firstAttribute="leading" secondItem="Kmo-Rp-yWj" secondAttribute="leading" constant="20" id="cwz-Uh-CdF"/>
@@ -151,7 +159,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PO-x2-n4K">
-                                <rect key="frame" x="0.0" y="44" width="80" height="40"/>
+                                <rect key="frame" x="0.0" y="48" width="80" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="52p-SF-OO4"/>
                                     <constraint firstAttribute="height" constant="40" id="uMp-wB-Iaa"/>
@@ -185,6 +193,7 @@
                         <outlet property="carLabel" destination="pxd-Lf-4wU" id="6wN-Xr-b8w"/>
                         <outlet property="carView" destination="MKC-Wc-0b0" id="Rbo-IU-Maz"/>
                         <outlet property="carViewImage" destination="YhK-mu-n9U" id="kKw-yj-ta2"/>
+                        <outlet property="musicSlider" destination="hNw-0n-mw5" id="hTN-Pw-idy"/>
                         <outlet property="nameField" destination="DLB-65-a99" id="jN2-zl-faj"/>
                         <outlet property="nameLabel" destination="wCP-xI-zg1" id="6Of-lI-tTS"/>
                         <outlet property="speedField" destination="6sO-xr-1NR" id="9iE-C6-SuO"/>
@@ -200,7 +209,7 @@
     </scenes>
     <resources>
         <image name="2" width="349" height="480"/>
-        <image name="car1" width="480" height="960"/>
+        <image name="car1" width="248" height="500"/>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
